@@ -41,7 +41,7 @@
         --fs-h1: 2rem;
         --fs-h1-span: 3.5rem;
         --fs-h2: 2rem;
-        --fs-h3: 1.1rem;
+        --fs-h3: 1.3rem;
         --fs-h4: 1.4rem;
         --fs-p: 0.7rem;
 
@@ -354,7 +354,7 @@ a {
 
     opacity: 0;
     animation: show-content 1s linear forwards;
-    animation-delay: 0.8s;
+    animation-delay: 0.7s;
 }
 
 .homeInfo h1 span {
@@ -363,7 +363,7 @@ a {
 
     opacity: 0;
     animation: show-content 1s linear forwards;
-    animation-delay: 0.8s;
+    animation-delay: 0.9s;
 }
 
 
@@ -437,7 +437,8 @@ a {
     font-size: var(--fs-h3);
     margin-bottom: 1rem;
     font-weight: 700;
-    
+
+
 }
 .typing-text
 {
@@ -445,6 +446,9 @@ a {
     font-weight: 700;
     min-width: 280px; 
     text-align: justify;
+    opacity: 0;
+        animation: show-content 1s linear forwards;
+        animation-delay: 1s;
 }
 .typing-text span
 {
@@ -476,6 +480,7 @@ a {
     right:-2px;
     width: 0;
     
+
     position: absolute;
     color: var(--secondary);
     white-space: nowrap;
