@@ -5,28 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="mainStyle.css">
-
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
 
     <title>IE Portfolio</title>
 </head>
 
+<!-- --------------Header Start-------------- -->
+<header>
+    <nav class="navBar">
+        <a href="#" class="logoImage">IE Portfolio.</a>
+        <ul>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#ProTop">Projects</a></li>
+            <li><a href="#aboutSec">About</a></li>
+            <li><a href="#contactSec">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<!-- --------------Header End-------------- -->
+
 <body>
 
-    <!-- --------------Header Start-------------- -->
-    <header>
-        <nav class="navBar">
-            <a href="#" class="logoImage">IE Portfolio.</a>
-            <ul>
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#ProTop">Projects</a></li>
-                <li><a href="#aboutSec">About</a></li>
-                <li><a href="#contactSec">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- --------------Header End-------------- -->
+    
 
 
     <!-- --------------Wrapper Bars Animation-------------- -->
@@ -48,13 +48,17 @@
         
         <div class="homeInfo">
             <h1>Hey, I'm <span>Idan</span>.</h1>
-            <h3>
+           <!-- H3 Animation Fail - Responive Compatibility  
+                <h3>
                 I'm a
-                <span style="--i:5;" data-text="Full-Stack Developer">Full-Stack Developer.</span>
-                <span style="--i:4;" data-text="Real Estate Professional.">Real Estate Professional.</span>
-                <span style="--i:3;" data-text="Musician &#127926;">Musician. &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
-                <span style="--i:2;" data-text="Team Player. &#127867;">Team Player. &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
-                <span style="--i:1;" data-text="Good Hire&nbsp&#128498;">Good Hire &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span> 
+                <span style="--l:5;" data-text="Full-Stack Developer">Full-Stack Developer.</span>
+                <span class="h3hide" style="--l:4;" data-text="Real Estate Professional.">Real Estate Professional.</span>
+                <span class="h3hide" style="--l:3;" data-text="Musician &#127926;">Musician. &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+                <span class="h3hide" style="--l:2;" data-text="Team Player. &#127867;">Team Player. &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+                <span class="h3hide" style="--l:1;" data-text="Good Hire&nbsp&#128498;">Good Hire &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span> 
+            </h3> -->
+            <h3 class="typing-text">
+                I'm a <span></span>
             </h3>
 
             <p>
@@ -201,7 +205,7 @@
             <div class="pCardsBox">
 
                 <div class="cardsImgBox">
-                    <img src="/galaxy-wallpaper-warm-colors.jpg" alt="ProjectName">
+                    <img src="Media/galaxy_vibrant.jpg" alt="ProjectName">
                 </div>
                 <div class="cardsTag">
                     || HTML || CSS || 
@@ -216,7 +220,7 @@
             <div class="pCardsBox">
 
                 <div class="cardsImgBox">
-                    <img src="/picture-galaxy-that-is-from-top.jpg" alt="ProjectName">
+                    <img src="Media/galaxy_warm.jpg" alt="ProjectName">
                 </div>
                 <div class="cardsTag">
                     ----|| HTML || CSS ||----
@@ -231,7 +235,7 @@
             <div class="pCardsBox">
 
                 <div class="cardsImgBox">
-                    <img src="/galaxy-wallpaper-warm-colors.jpg" alt="ProjectName">
+                    <img src="Media/galaxy_vibrant.jpg" alt="ProjectName">
                 </div>
                 <div class="cardsTag">
                     || HTML || CSS || 
@@ -283,7 +287,11 @@
             </div>
     </section>
     <!-- --------------Contact Section End-------------- -->
-
+    <!-- top button -->
+     <div class="btn-up">
+        <a href="#"><i class='bx bx-chevron-up-square'></i></box-icon></a>
+     </div>
+    <!-- top button -->
 </main>
     <!-- --------------Footer-------------- -->
     <footer>
