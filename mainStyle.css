@@ -13,6 +13,8 @@
     --backcolor2: #242b37;
     --backcolor3: #2e4057;
 
+    --gradient1: linear-gradient(90deg, #2e4057 0%, #254f89 20%);
+
     --secondary: #B8F3FF;
     --accent: #63768D;
     --accent2: #554971;
@@ -35,24 +37,36 @@
     --secondaryResp: #5b2dbd;
 }
 
-@media (max-width:600px) {
+@media (max-width:850px) {
     :root {
         /* --secondary: #67db50; */
         --secondary: #B8F3FF;
-        --fs-h1: 2rem;
-        --fs-h1-span: 3.5rem;
-        --fs-h2: 2rem;
-        --fs-h3: 1.3rem;
+        --fs-h1: 2.3rem;
+        --fs-h1-span: 4rem;
+        --fs-h2: 2.5rem;
+        --fs-h3: 1.5rem;
         --fs-h4: 1.4rem;
-        --fs-p: 0.7rem;
+        --fs-p: 0.8rem;
 
-        --fs-navlogo: 1rem;
+        --fs-navlogo: 1.5rem;
         --fs-navli: 0.7rem;
         --fs-rebtn: 1rem;
         --fs-scbtn: 1rem;
         --fs-asidebtn: 1.5rem;
     }
 
+
+    /* ---NAVBAR START--- */
+
+    .navBar
+    {
+        display: flex;
+        flex-direction: row !important;
+       
+
+        padding-left: 1em 
+        !important;
+    }
     .navBar ul {
         display: flex; 
         flex-direction: column;
@@ -61,6 +75,15 @@
         margin-top: 1em;
         }
 
+    .navBar i{
+        margin-top: 0.3em !important;
+    }
+
+    .checkON
+    {
+        right:0;
+        transform: translateX(4em);
+    }
     .checkbox-container
     {
         /* display: none !important; */
@@ -87,7 +110,7 @@
         display: flex;     
         justify-content: center !important;
         
-        font-size: 1rem !important;
+        font-size: 1.5rem !important;
     }
 
     .navBar ul li a:hover
@@ -115,16 +138,24 @@
         top:0;
     }
 
-    #checkbox-status:checked ~ #coverlay
-    {
-        backdrop-filter: blur(15px);
-        height: 100%;
-        width: 100%;
+    #checkbox-status:checked ~ #coverlay, #checkbox-status:checked ~#coverlay:hover 
+    {   
+        background-color: rgba(0, 0, 0, 0.066);
+        backdrop-filter: blur(4px) !important;
+        height: 100vh !important;
+        width: 100vw !important;
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 99;
+        z-index: 100 !important;
+        transition: 0s !important;
+        overflow: visible;
     }
+
+        #checkbox-status:checked ~ .checkON
+        {
+            display:none !important;
+        }
    /*  ----END NAVBAR---- */
     .homeSec {
         display: flex;
@@ -260,6 +291,7 @@ header {
     width: 100%;
     position: fixed;
     z-index: 100;
+    display: flex;
 }
 
 .navBar a {
@@ -267,21 +299,20 @@ header {
     text-decoration: none;
 }
 
+.navBar i {
+    color: white;
+    font-size: 3em;
+    margin-top: 0.3em;
+    
+}
+
 .checkbox-container
 {
     height: auto;
-    width: 100%;
     display: flex;
     flex-direction: row;
     align-items:center;
     box-sizing: border-box;
-}
-
-.navBar i
-{
-    color:white;
-    font-size: 2.5em;
-    margin-top: 0.3em;
 }
 
 #checkbox-status
@@ -305,10 +336,10 @@ header {
 
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
+    align-items:center;
+    justify-content: space-between;
     z-index: 100;
-    column-gap: 2em;
+  
     visibility: hidden;
     opacity: 0;
     animation: show-content 1.2s linear forwards;
@@ -319,8 +350,7 @@ header {
     font-size: var(--fs-navlogo);
     font-weight: 800;
     transition: .5s ease-in-out;
-    padding: 5px;
-    
+    padding: 5px; 
 }
 
 .navBar .logoImage:hover {
@@ -359,7 +389,7 @@ header {
 .navBar ul li.active a {
     color: var(--secondary);
     border-bottom: 2px solid var(--accent3);
-    background: #8aa6cb0d;
+    box-shadow: 0px 0px 2px 2px rgb(43, 60, 81);
 }
 
 /* <------------Header End-----------> */
@@ -797,7 +827,7 @@ header {
     color: var(--secondary);
     background-color: var(--backcolor3);
     box-shadow: 0 0 5px var(--secondary);
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .asideItem a:hover {
