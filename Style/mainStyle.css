@@ -8,7 +8,8 @@
     text-decoration: none;
 }
 
-:root {
+:root 
+{
     --backcolor1: #1f242d;
     --backcolor2: #242b37;
     --backcolor3: #2e4057;
@@ -26,6 +27,8 @@
     --fs-h2: 4rem;
     --fs-h3: 2rem;
     --fs-h4: 1.4rem;
+    --fs-h5: 0.9rem;
+    --fs-h6: 0.6rem;
     --fs-p: 1rem;
 
     --fs-navlogo: 2rem;
@@ -142,14 +145,13 @@
     {   
         background-color: rgba(0, 0, 0, 0.066);
         backdrop-filter: blur(4px) !important;
-        height: 100vh !important;
-        width: 100vw !important;
+        height: 100% !important;
+        width: 100% !important;
         position: fixed;
         top: 0;
         left: 0;
         z-index: 100 !important;
         transition: 0s !important;
-        overflow: visible;
     }
 
         #checkbox-status:checked ~ .checkON
@@ -389,7 +391,7 @@ header {
 .navBar ul li.active a {
     color: var(--secondary);
     border-bottom: 2px solid var(--accent3);
-    box-shadow: 0px 0px 2px 2px rgb(43, 60, 81);
+    box-shadow: 0px 0px 2px 2px rgba(249, 249, 249, 0.021);
 }
 
 /* <------------Header End-----------> */
@@ -827,7 +829,7 @@ header {
     color: var(--secondary);
     background-color: var(--backcolor3);
     box-shadow: 0 0 5px var(--secondary);
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .asideItem a:hover {
@@ -1101,19 +1103,32 @@ header {
     }
 
 }
-
-
 /* < !-- top button --> */
 
-#footer {
+
+/* < !-- Footer --> */
+#footer 
+{
     background: var(--accent3);
     display: flex;
-    padding: 5px;
-    justify-content: center;
+    
+    padding: 0.3em 1em;
+    
+    justify-content: space-between;
     text-align: center;
 }
 
-#footer h5 {
+#footer h5 
+{
     text-align: justify;
-    font-size: 0.8rem;
+    font-size: var(--fs-h5);
+    align-self: center;
 }
+
+
+#footer h6 {
+    text-align: justify;
+    font-size: var(--fs-h6);
+    padding-right: 1em;
+}
+/* < !-- Footer End--> */
