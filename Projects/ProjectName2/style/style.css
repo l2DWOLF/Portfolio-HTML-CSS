@@ -128,7 +128,7 @@ form
     color: var(--clr-btn);
     font: var(--ff-button);
     background: var(--clr-btn-bg);
-    width: 20%;
+    width: 30%;
     height: 2.6em;
     margin-top: 1.15em;
     border: none;
@@ -156,4 +156,9 @@ form
     height: 3.125em;
     font-weight: 600;
     }
+
+    .formBox
+    {width: 85%;}
+    .promotext
+    {width:90%;}
 }

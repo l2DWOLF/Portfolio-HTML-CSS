@@ -14,7 +14,7 @@
     <main>
         <div class="banner">
             <h1>Here & Now</h1>
-            <h2>Subscribe to Enjoy Complementary Gifts</h2>
+            <h2>Subscribe to Enjoy Complementary Gifts.</h2>
             <br>
             <p class="promotext">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum alias omnis obcaecati inventore, est consequatur veniam!
@@ -24,17 +24,19 @@
                 <form action="">
                     <div class="inputBox">
                         <div class="formInputs">
-                        <label for="text">Name</label>
-                        <input required type="text">
+                        <label for="name">Name</label>
+                        <input id="name" required type="text" pattern="[a-zA-Z]{4,}" title="Enter Name - Min. 4 Chars, Alphabet Only.">
                         </div>
 
                         <div class="formInputs">
                         <label for="email">Email</label>
-                        <input required type="email">
+                        <input id="email" required type="email" pattern="[a-zA-Z0-9 \+ \- \.]+@([a-z]+\.)+[a-zA-Z]{2,8}" title="Example: Person@Company.com">
                         </div>
+                            <button id="sbtn">Subscribe</button>
                     </div>
+
+                
                 </form>
-                <button id="sbtn">Subscribe Me</button>
             </div>
             
         </div>
