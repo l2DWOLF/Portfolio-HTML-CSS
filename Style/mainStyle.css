@@ -14,7 +14,7 @@
     --backcolor2: #242b37;
     --backcolor3: #2e4057;
 
-    --gradient1: linear-gradient(90deg, #2e4057 0%, #254f89 20%);
+    --gradient1: linear-gradient(to top, #accbee 0%, #94accb 100%);
 
     --secondary: #B8F3FF;
     --accent: #63768D;
@@ -40,6 +40,8 @@
     --secondaryResp: #5b2dbd;
 }
 
+/* --------MEDIA QUERIES-------- */
+
 @media (max-width:850px) {
     :root {
         /* --secondary: #67db50; */
@@ -49,7 +51,9 @@
         --fs-h2: 2.5rem;
         --fs-h3: 1.5rem;
         --fs-h4: 1.4rem;
-        --fs-p: 0.8rem;
+        --fs-h5: 0.8rem;
+        --fs-h6: 0.5rem;
+        --fs-p: 1rem;
 
         --fs-navlogo: 1.5rem;
         --fs-navli: 0.7rem;
@@ -63,12 +67,14 @@
 
     .navBar
     {
-        display: flex;
-        flex-direction: row !important;
-       
-
-        padding-left: 1em 
-        !important;
+        flex-direction: row;
+        align-content: center !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        justify-items: center !important;
+        padding:unset !important;
+        padding-left:2.5em !important;
+        gap:2em !important;
     }
     .navBar ul {
         display: flex; 
@@ -76,16 +82,17 @@
         background-color: var(--accent3);
         width: 100%;
         margin-top: 1em;
+        position:relative;
         }
 
     .navBar i{
-        margin-top: 0.3em !important;
+     /*  position: relative; */
     }
 
     .checkON
     {
         right:0;
-        transform: translateX(4em);
+       /*  transform: translateX(4em); */
     }
     .checkbox-container
     {
@@ -99,26 +106,37 @@
         height: 40%;
         z-index: 100;
         
-        background-color: var(--backcolor3);
+        background-color: var(--gradient1);
         box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
         transition: 0.7s ease-out;
     }
 
-    .navBar ul li a{
-        box-sizing: border-box;
-        height: auto;
+    .navBar ul li a
+    {   
         width: 100%;
-        padding: 20px 30px;
+        height: auto;
+        padding: 0.75em !important;
 
         display: flex;     
         justify-content: center !important;
         
-        font-size: 1.5rem !important;
+    
+    font-size: 1.6em !important;
+    color: var(--accent3) !important;
+    background-color: var(--backcolor3);
+    border: 1px solid var(--backcolor1) !important;
+    box-shadow: 0 0 2px var(--secondary) !important;
+
+    border-bottom: unset !important;
     }
 
-    .navBar ul li a:hover
+    .navBar ul li a:hover, .navBar ul li.active a:hover
     {
-        background-color: var(--backcolor3) !important;
+        background-color: var(--accent3);
+        color: var(--backcolor3) !important;
+        border: 1px solid var(--backcolor3);
+        box-shadow: 0 0 15px var(--secondary);
+        transform: scale(1.1) translateY(-0.2%);
     }
 
     .checkON, .checkOFF
@@ -128,11 +146,11 @@
         align-self: center;
     }
 
-        .checkON,
-        .checkOFF
-        {
-            display:block;
-        }
+    .checkON,
+    .checkOFF
+    {
+        display:block;
+    }
 
         
 
@@ -143,7 +161,9 @@
 
     #checkbox-status:checked ~ #coverlay, #checkbox-status:checked ~#coverlay:hover 
     {   
-        background-color: rgba(0, 0, 0, 0.066);
+
+        background: rgba(0, 0, 0, 0.066);
+        
         backdrop-filter: blur(4px) !important;
         height: 100% !important;
         width: 100% !important;
@@ -152,12 +172,13 @@
         left: 0;
         z-index: 100 !important;
         transition: 0s !important;
+        overflow: visible;
     }
 
-        #checkbox-status:checked ~ .checkON
-        {
-            display:none !important;
-        }
+    #checkbox-status:checked ~ .checkON
+    {
+        display:none !important;
+    }
    /*  ----END NAVBAR---- */
     .homeSec {
         display: flex;
@@ -210,7 +231,7 @@
     .contactForm
     {
         width: 100% !important;
-        height:250px !important;
+        height: 18.75em !important;
     }
 
     .contact-box .user-box input 
@@ -220,6 +241,7 @@
     .contact-box form
     {
         grid-template-columns: 1fr 1fr;
+        gap:1em !important;
     }
     .form-btn
     {
@@ -236,6 +258,15 @@
     }
     .btn-up a {
         font-size: 3rem !important;
+    }
+
+    #footer h5
+    {
+        font-size: var(--fs-h5) ;
+    }
+    #footer h6
+    {
+        font-size: var(--fs-h6);
     }
 
 }
@@ -321,8 +352,6 @@ header {
 .navBar i {
     color: white;
     font-size: 3em;
-    margin-top: 0.3em;
-    
 }
 
 .checkbox-container
@@ -332,6 +361,7 @@ header {
     flex-direction: row;
     align-items:center;
     box-sizing: border-box;
+    
 }
 
 #checkbox-status
@@ -341,7 +371,6 @@ header {
 .checkON, .checkOFF
 {
     display:none;
-    padding: 0 20px;
 }
 
 .navBar {
@@ -1079,9 +1108,9 @@ header {
     height: 100%;
     padding: 40px;
     transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, .5);
+    background: var(--backcolor1);
     box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    box-shadow: 0px 0px 15px 2px #030d672f;
     border-radius: 10px;
 }
 
@@ -1097,8 +1126,9 @@ header {
 .contact-box .user-box input {
     width: 100%;
     padding: 10px 0;
-    font-size: 16px;
-    color: #fff;
+    font-size:  1.25rem;
+    color: #00fbff;
+    font-weight: 500;
     margin-bottom: 30px;
     border: none;
     border-bottom: 1px solid #fff;
@@ -1111,19 +1141,28 @@ header {
     top: 0;
     left: 0;
     padding: 10px 0;
-    font-size: 16px;
+    font-size: 1.25em;
+    font-weight: 600;
     color: #fff;
     pointer-events: none;
     transition: .5s;
 }
 
-.contact-box .user-box input:focus~label,
-.contact-box .user-box input:valid~label {
+.contact-box .user-box input:focus~label
+{
     top: -20px;
     left: 0;
     color: var(--secondary);
-    font-size: 12px;
+    font-size: 0.8rem;
 }
+.contact-box .user-box input:valid~label
+{
+    top: -20px;
+    left: 0;
+    color: greenyellow;
+    font-size: 0.8rem;
+}
+
 
 .contact-box form a {
     position: relative;
