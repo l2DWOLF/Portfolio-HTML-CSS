@@ -258,7 +258,7 @@
 
     .btn-up
     {
-        right:-0.2em !important;
+        right: 0.2em !important;
         bottom:1em !important;
     }
     .btn-up a {
