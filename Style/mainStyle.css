@@ -204,19 +204,20 @@
     }
 
     .homeS-img:hover {
-        /*   transform: scale(1.1) translateX(20%)!important; */
+        transform: scale(1.05) translateX(10%)!important;
     }
 
     .homeS-img-Box,
     .homeS-img-Box::before,
     .homeS-img-Box::after {
         padding: 2px !important;
-        width: 65vw !important;
-        height: 65vw !important;
+        width: 50vw !important;
+        height: 50vw !important;
     }
 
     #aboutSec p {
         padding: 0 !important;
+        font-size: var(--fs-p);
     }
 
     #contactSec p {
@@ -231,12 +232,12 @@
     .contactForm
     {
         width: 100% !important;
-        height: 18.75em !important;
+        height: 20em !important;
     }
 
     .contact-box .user-box input 
     {
-         width: 100% !important;
+        width: 100% !important;
     }
     .contact-box form
     {
@@ -1110,8 +1111,13 @@ header {
     transform: translate(-50%, -50%);
     background: var(--backcolor1);
     box-sizing: border-box;
-    box-shadow: 0px 0px 15px 2px #030d672f;
+    box-shadow: 0px 0px 15px 2px #afc0ff50;
     border-radius: 10px;
+}
+
+.contactForm
+{
+    height: 450px
 }
 
 .contact-box form
@@ -1153,13 +1159,13 @@ header {
     top: -20px;
     left: 0;
     color: var(--secondary);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 .contact-box .user-box input:not(:placeholder-shown)~label
 {
         top: -20px;
         left: 0;
-        font-size: 0.85em;
+        font-size: 0.9rem;
         font-weight: 600;
         transition: .5s;
         text-shadow: rgb(255, 0, 0) 1px 0 5px;
@@ -1169,7 +1175,7 @@ header {
     top: -20px;
     left: 0;
     color: greenyellow;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     text-shadow:none;
 }
 
