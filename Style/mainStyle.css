@@ -1140,12 +1140,15 @@ BORDER BORDER BORDER BORDER BORDER BORDER BORDER BORDER
     background: transparent;
 }
 
+#userEmail
+{
+font-size: 0.9rem;
+}
 #userMessage {
     /* padding-bottom: 35px; */
     font-size: 0.7rem;
     padding-bottom: 23px;
 }
-
 .msg-label {
     /*   padding-bottom: 20px; */
     bottom:20px
