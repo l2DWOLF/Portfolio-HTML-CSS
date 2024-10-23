@@ -48,7 +48,7 @@
         --secondary: #B8F3FF;
         --fs-h1: 2.3rem;
         --fs-h1-span: 4rem;
-        --fs-h2: 2.5rem;
+        --fs-h2: 3.5rem;
         --fs-h3: 1.5rem;
         --fs-h4: 1.4rem;
         --fs-h5: 0.8rem;
@@ -221,7 +221,8 @@
     }
     #aboutSec p {
         padding: 0 !important;
-        font-size: var(--fs-p);
+        font-size: var(--fs-p) !important;
+        text-align: center !important;
     }
 
     #contactSec p {
@@ -230,6 +231,13 @@
 
     .projectSec p {
         font-size: var(--fs-p);
+    }
+
+
+    .pCardsContain{
+        grid-template-columns: repeat(auto-fill, 100px);
+        column-gap:4em !important;
+        width: 100% !important;
     }
 
 
@@ -277,51 +285,19 @@
 }
 
 /*
-    body{
-        background: red;
-    }
-
-  
-
-
-    .homeInfo
-    {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .homeInfo p
-    {
-        text-align: justify;
-    }
-
-    .projectSec
-    {
-        max-width: 100vw;
-        overflow: hidden;
-    }
-
-    .pCardsContain
-    {
-
-    }
-    .pCardsContain, .pCardsBox
-    {
-        max-width: 100vw;
-    }
-
-} */
+BORDER BORDER BORDER BORDER BORDER BORDER BORDER BORDER
+BORDER BORDER BORDER BORDER BORDER BORDER BORDER BORDER
+BORDER BORDER BORDER BORDER BORDER BORDER BORDER BORDER
+BORDER BORDER BORDER BORDER BORDER BORDER BORDER BORDER
+BORDER BORDER BORDER BORDER BORDER BORDER BORDER BORDER
+BORDER BORDER BORDER BORDER BORDER BORDER BORDER BORDER
+BORDER BORDER BORDER BORDER BORDER BORDER BORDER BORDER
+*/
 
 /* ---------Desktop CSS----------- */
 
-
-
 html {
     scroll-behavior: smooth;
-
 }
 
 body {
@@ -341,6 +317,9 @@ main {
     flex-direction: column;
 }
 
+/*
+BORDER BORDER BORDER BORDER BORDER BORDER BORDER BORDER
+*/
 /* <------------Header-----------> */
 header {
     width: 100%;
@@ -446,7 +425,9 @@ header {
 }
 
 /* <------------Header End-----------> */
-
+/*
+BORDER BORDER BORDER BORDER BORDER BORDER BORDER BORDER
+*/
 /* <------------WrapperAnimation-----------> */
 
 .wrapperBarsAnim {
@@ -518,7 +499,9 @@ header {
 }
 
 /* <----------WrapperAnimation End---------> */
-
+/*
+BORDER BORDER BORDER BORDER BORDER BORDER BORDER BORDER
+*/
 /* <------------Home Section-----------> */
 
 .homeSec {
@@ -560,7 +543,6 @@ header {
     animation: show-content 1s linear forwards;
     animation-delay: 0.9s;
 }
-
 
 /*<-----H3 Animation Fail :)----->*/
 /*<-----Responive Compatibility------->*/
@@ -843,8 +825,9 @@ header {
 }
 
 /* <------------End Home Section-----------> */
-
-
+/*
+BORDER BORDER BORDER BORDER BORDER BORDER BORDER BORDER
+*/
 /* <--------------Aside Bar-------------> */
 #asideBar {
     background: var(--backcolor2);
@@ -902,8 +885,9 @@ header {
 }
 
 /* <------------Aside Bar End-----------> */
-
-
+/*
+BORDER BORDER BORDER BORDER BORDER BORDER BORDER BORDER
+*/
 /* <------------Projects Section-----------> */
 
 .projectSec {
@@ -921,23 +905,24 @@ header {
 .projectSec h2 {
     color: var(--backcolor3);
     font-size: var(--fs-h2);
-    text-decoration: underline;
+    
 }
 
 .pCardsContain {
     background: var(--accent3);
 
-    width: 70%;
+    width: 80%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, 250px);
     justify-content: center;
-    gap: 20px;
+    row-gap: 3em;
+    column-gap: 1em;
     padding: 20px;
 }
 
 .pCardsBox {
     background: transparent;
-    min-height: 450px;
+    min-height:105%;
     padding: 0;
 
     position: relative;
@@ -1046,7 +1031,9 @@ header {
 }
 
 /* <----------End Projects Section---------> */
-
+/*
+BORDER BORDER BORDER BORDER BORDER BORDER BORDER BORDER
+*/
 /* <----------------About Me---------------> */
 
 #aboutSec {
@@ -1075,11 +1062,12 @@ header {
 }
 
 /* <----------------End About---------------> */
-
+/*
+BORDER BORDER BORDER BORDER BORDER BORDER BORDER BORDER
+*/
 /* <----------------Contact Me---------------> */
 
 #contactSec {
-
     min-height: 400px;
     padding: 50px 25px 50px 25px;
     gap: 15px;
@@ -1108,7 +1096,6 @@ header {
 }
 
 .contactForm {
-   
     width: 50%;
     height: 400px;
     position: relative;
@@ -1154,6 +1141,17 @@ header {
     border-bottom: 1px solid #fff;
     outline: none;
     background: transparent;
+}
+
+#userMessage {
+    /* padding-bottom: 35px; */
+    font-size: 0.7rem;
+    padding-bottom: 23px;
+}
+
+.msg-label {
+    /*   padding-bottom: 20px; */
+    bottom:0px
 }
 
 .contact-box .user-box label {
@@ -1227,8 +1225,17 @@ header {
     transition: .5s;
 }
 
-/* <----------------End Contact---------------> */
+.form-btn:hover {
+    background: transparent;
+    color: var(--secondary);
+    box-shadow: 0 0 5px var(--secondary);
+    transform: scale(1.1) translateY(-5%);
+}
 
+/* <----------------End Contact---------------> */
+/*
+BORDER BORDER BORDER BORDER BORDER BORDER BORDER BORDER
+*/
 /* < !-- top button --> */
 .btn-up {
     display: inline-flex;
@@ -1281,8 +1288,9 @@ header {
 
 }
 /* < !-- top button --> */
-
-
+/*
+BORDER BORDER BORDER BORDER BORDER BORDER BORDER BORDER
+*/
 /* < !-- Footer --> */
 #footer 
 {
