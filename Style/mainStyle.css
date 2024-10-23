@@ -48,7 +48,7 @@
         --secondary: #B8F3FF;
         --fs-h1: 2.3rem;
         --fs-h1-span: 4rem;
-        --fs-h2: 3.5rem;
+        --fs-h2: 2.5rem;
         --fs-h3: 1.5rem;
         --fs-h4: 1.4rem;
         --fs-h5: 0.8rem;
@@ -222,7 +222,6 @@
     #aboutSec p {
         padding: 0 !important;
         font-size: var(--fs-p) !important;
-        text-align: center !important;
     }
 
     #contactSec p {
@@ -235,9 +234,7 @@
 
 
     .pCardsContain{
-        grid-template-columns: repeat(auto-fill, 100px);
-        column-gap:4em !important;
-        width: 100% !important;
+        gap:2em !important;
     }
 
 
@@ -298,6 +295,7 @@ BORDER BORDER BORDER BORDER BORDER BORDER BORDER BORDER
 
 html {
     scroll-behavior: smooth;
+
 }
 
 body {
@@ -905,24 +903,23 @@ BORDER BORDER BORDER BORDER BORDER BORDER BORDER BORDER
 .projectSec h2 {
     color: var(--backcolor3);
     font-size: var(--fs-h2);
-    
+    text-decoration: underline;
 }
 
 .pCardsContain {
     background: var(--accent3);
 
-    width: 80%;
+    width: 70%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 250px);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: center;
-    row-gap: 3em;
-    column-gap: 1em;
+    gap: 20px;
     padding: 20px;
 }
 
 .pCardsBox {
     background: transparent;
-    min-height:105%;
+    min-height: 450px;
     padding: 0;
 
     position: relative;
@@ -1151,7 +1148,7 @@ BORDER BORDER BORDER BORDER BORDER BORDER BORDER BORDER
 
 .msg-label {
     /*   padding-bottom: 20px; */
-    bottom:0px
+    bottom:20px
 }
 
 .contact-box .user-box label {
@@ -1225,11 +1222,13 @@ BORDER BORDER BORDER BORDER BORDER BORDER BORDER BORDER
     transition: .5s;
 }
 
-.form-btn:hover {
-    background: transparent;
-    color: var(--secondary);
+.form-btn:hover
+{
+    background-color: var(--secondary);
+    color: var(--backcolor3);
+    border: 2px solid var(--backcolor3);
     box-shadow: 0 0 5px var(--secondary);
-    transform: scale(1.1) translateY(-5%);
+    transform: scale(1.1) translateY(-5%) !important;
 }
 
 /* <----------------End Contact---------------> */
