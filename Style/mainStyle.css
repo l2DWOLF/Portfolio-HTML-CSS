@@ -505,7 +505,7 @@ BORDER BORDER BORDER BORDER BORDER BORDER BORDER BORDER
 .homeSec {
     display: flex;
     align-items: center;
-    height: 77vh;
+    min-height: 90vh;
     padding: 5em 6% 100px;
     
     gap: 5px;
@@ -861,9 +861,8 @@ BORDER BORDER BORDER BORDER BORDER BORDER BORDER BORDER
     background-color: var(--backcolor3);
     box-shadow: 0 0 5px var(--secondary);
     transition: 0.5s;
-
-    animation: spinner 3s linear infinite;
     
+    animation: spinner 3s linear infinite;
 }
 
 .asideItem a:hover {
