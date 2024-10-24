@@ -18,7 +18,6 @@
     --ff-label: normal normal bold 0.9em/24px Helvetica;
     --ff-button: normal normal bold 1em/30px Helvetica;
 }
-
 html
 {
     scroll-behavior: smooth;
