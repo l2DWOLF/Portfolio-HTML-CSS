@@ -20,7 +20,7 @@
     --ff-p: normal normal normal 16px/20px "Varela Round";
     --ff-label: normal normal normal 16px/20px "Varela Round";
     --ff-button: normal normal normal 16px/20px "Varela Round";
-
+    
     --ts-h1: 0px 0px 36px #00000087;
 }
 
@@ -156,7 +156,6 @@ form
     height: 3.125em;
     font-weight: 600;
     }
-
     .formBox
     {width: 80%;}
     .promotext
