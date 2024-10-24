@@ -12,7 +12,7 @@
 
   --clr-blue: #020253;
   --clr-label: #2c2c2c;
-  --clr-bg: #e5eeff 0% 0% no-repeat padding-box;
+  --clr-inputbg: #e5eeff 0% 0% no-repeat padding-box;
 }
 
 .container {
@@ -23,6 +23,7 @@
 
 .container-img {
   height: 100vh;
+  border: 1px solid #707070;
 }
 
 .container-img>img {
@@ -38,7 +39,7 @@
   justify-content: center;
   flex-grow: 1;
   direction: rtl;
-
+  border: 1px solid #707070;
   max-height: 100vh;
 }
 
@@ -72,7 +73,7 @@
 .form-control>input {
   width: 90%;
   height: 50px;
-  background: var(--clr-bg);
+  background: var(--clr-inputbg);
   border: 0;
   border-bottom: 4px solid var(--clr-blue);
 }
